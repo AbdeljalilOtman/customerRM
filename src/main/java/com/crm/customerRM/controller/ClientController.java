@@ -20,10 +20,10 @@ public class ClientController {
     // Method to handle GET request for displaying all clients
     @RequestMapping("/clients") // Use @GetMapping for GET requests
     public String displayClients(Model model , RedirectAttributes redirectAttributes) {
-        @SuppressWarnings("unchecked")
         List<Client> clients = clientModel.Display_Clients();
-        redirectAttributes.addFlashAttribute("clients", clients); // Fetch clients from the service // Add the client list to the model
-        return "dashboard"; // Return the dashboard view with the client list
-    }
+        System.out.println("Fetched Clients: " + clients); // Log the fetched clients
+        model.addAttribute("clients", clients);
+        return "dashboard";
+        }
     
 }

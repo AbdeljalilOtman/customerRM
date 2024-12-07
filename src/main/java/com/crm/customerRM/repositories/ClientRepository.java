@@ -5,6 +5,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.crm.customerRM.entities.Client;
 
 public interface ClientRepository extends JpaRepository<Client,Long> {
-    @SuppressWarnings({ "rawtypes", "unchecked" })
-    List findAll();
+
+    List<Client> findAll();
 }

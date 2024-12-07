@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 
 import com.crm.customerRM.repositories.ClientRepository;
 
+
+
 @Service
 public class ClientModel {
 
@@ -14,8 +16,8 @@ public class ClientModel {
     @Autowired
     private ClientRepository clientRepo;
 
-    @SuppressWarnings("rawtypes")
-    public List Display_Clients(){
+
+    public List<com.crm.customerRM.entities.Client> Display_Clients(){
         return clientRepo.findAll();
     }
     
